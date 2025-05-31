@@ -1,0 +1,137 @@
+.shop-section {
+  background-color: #fff; 
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.text {
+  color: #009bbf;
+}
+
+
+h3 {
+  font-family: 'Creepster', sans-serif;
+}
+
+.product-card {
+  background-color: #fff; 
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card .card-body {
+  text-align: center;
+}
+
+.product-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #009bbf; 
+  border: none;
+  padding: 8px 16px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #547177d5;
+  border: none;
+  padding: 8px 16px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+.quick-view-button {
+  font-size: 14px;
+  color: #009bbf; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quick-view-button:hover {
+  text-decoration: underline;
+}
+
+.quick-view-content {
+  background-color: #333; 
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.essentials-grid {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.essentials-grid .card {
+  background-color: #262626; 
+  border: 1px solid #444;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.essentials-grid .card:hover {
+  transform: translateY(-5px);
+}
+
+.essentials-grid i {
+  font-size: 30px;
+  color: #009bbf;
+  margin-bottom: 10px;
+}
+
+.cart-preview {
+  background-color: #262626; 
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.cart-preview .btn-primary {
+  background-color: #009bbf; 
+  color: #000;
+  padding: 8px 16px;
+  transition: background 0.3s;
+}
+
+.cart-preview .btn-primary:hover {
+  background-color: #00b5d8; 
+}
+

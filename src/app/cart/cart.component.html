@@ -1,0 +1,84 @@
+<section class=" bg-light text-dark">
+  <div class="container-fluid my-5">
+    <div class="component-block">
+      <i class="bi bi-cart-fill h2 text-primary mb-3"></i>
+        <h2 class="text-center fw-bold">Cart</h2>
+        <div *ngIf="cartItems.length === 0" class="text-center">
+          <p class="text-muted">Your cart is empty. Start shopping now!</p>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-10">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div *ngFor="let item of cartItems; let i = index" class="card mb-3 border-light shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="item.image" class="img-fluid rounded-start" [alt]="item.name">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">{{ item.name }}</h5>
+                <p class="card-text" style="color:#00c3ff">R{{ item.price }}</p>
+                <button class="btn btn-outline-danger" (click)="removeFromCart(i)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-light shadow-sm">
+          <div class="card-body text-center">
+            <h6 class="card-title ">Order Total</h6>
+            <h4 class="card-text fw-bold" style="color:#00c3ff" >R{{ cartTotal | number:'1.2-2' }}</h4>
+            <button class="btn btn-primary" disabled title="Checkout coming soon!">
+              Checkout (Coming Soon)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section">
+  <div class="container text-center">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3 class="footer-title">Contact Us</h3>
+        <p class="footer-text">Email: contact nexora&#64;tech.com</p>
+        <p class="footer-text">Phone: +27 123 456 789</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/" class="footer-link">Home</a></li>
+          <li><a href="/services" class="footer-link">Services</a></li>
+          <li><a href="/about" class="footer-link">About</a></li>
+          <li><a href="/contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="assets/facebook.png" alt="Facebook"></a>
+          <a href="#" class="social-link"><img src="assets/insta.png" alt="Instagram"></a>
+          <a href="#" class="social-link"><img src="assets/linked.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-text">© 2025 Nexora Tech. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
