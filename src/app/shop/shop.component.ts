@@ -50,7 +50,6 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadProducts();
-    this.loadEssentials();
   }
 
   loadProducts(): void {
@@ -169,35 +168,6 @@ export class ShopComponent implements OnInit {
 
     this.featuredProduct = this.products.find(p => p.isFeatured);
     this.filteredProducts = this.products.filter(p => !p.isFeatured);
-  }
-
-  loadEssentials(): void {
-    this.essentials = [
-      {
-        id: 1,
-        title: 'Hats & Wigs',
-        icon: 'hat-wizard',
-        description: '200+ styles from classic to crazy'
-      },
-      {
-        id: 2,
-        title: 'Masks',
-        icon: 'mask',
-        description: 'Latex, plastic, and fabric options'
-      },
-      {
-        id: 3,
-        title: 'Props',
-        icon: 'hand-sparkles',
-        description: 'Weapons, jewelry, and magical items'
-      },
-      {
-        id: 4,
-        title: 'Makeup',
-        icon: 'paint-brush',
-        description: 'Kits and professional supplies'
-      }
-    ];
   }
 
   filterProducts(): void {
